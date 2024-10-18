@@ -5,7 +5,7 @@ void DrawTextCenter(const char* text, int screenWidth, int screenHeight, int fon
   const int textOffsetWidth = MeasureText(text, fontSize);
   const int posX = (screenWidth / 2) - (textOffsetWidth / 2);
   const int posY = screenHeight / 2 - fontSize;
-  DrawText(text, posX, posY, fontSize, RAYWHITE);
+  DrawText(text, posX, posY, fontSize, color);
 }
 
 int main(void)
