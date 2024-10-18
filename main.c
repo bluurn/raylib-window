@@ -16,6 +16,9 @@ void DrawTextCenter(const char* text, int fontSize, Color color)
 
 
 // TODO: Press F to fullscreen
+// TODO: Focus window on start
+// TODO: Draw some shapes
+// TODO: Try animations
 int main(void)
 {
   int screenWidth    = INIT_SCREEN_WIDTH;
