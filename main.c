@@ -1,5 +1,13 @@
 #include "raylib.h"
 
+void DrawTextCenter(const char* text, int screenWidth, int screenHeight, int fontSize, Color color)
+{
+  const int textOffsetWidth = MeasureText(text, fontSize);
+  const int posX = (screenWidth / 2) - (textOffsetWidth / 2);
+  const int posY = screenHeight / 2 - fontSize;
+  DrawText(text, posX, posY, fontSize, RAYWHITE);
+}
+
 int main(void)
 {
   const int screenWidth = 1024;
@@ -9,10 +17,9 @@ int main(void)
   const char * title = "This is my first Raylib app";
 
 
+  SetConfigFlags(FLAG_WINDOW_TOPMOST);
   SetTargetFPS(60);
   InitWindow(screenWidth, screenHeight, title);
-
-  const int textOffsetWidth = MeasureText(text, fontSize);
 
   while(!WindowShouldClose()) {
 
@@ -20,7 +27,7 @@ int main(void)
 
     ClearBackground(DARKGRAY);
 
-    DrawText(text, (screenWidth / 2) - (textOffsetWidth / 2), screenHeight / 2 - fontSize, fontSize, RAYWHITE);
+    DrawTextCenter(text, screenWidth, screenHeight, fontSize, RAYWHITE);
 
     EndDrawing();
   }
