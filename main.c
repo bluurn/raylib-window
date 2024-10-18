@@ -6,6 +6,7 @@
 
 // TODO: Focus window on start
 // TODO: Draw some shapes
+// TODO: Add music :D
 // TODO: Try animations
 
 Vector2 GetTextUpperLeftCorner(const char * text, int fontSize)
@@ -22,7 +23,7 @@ Vector2 GetTextUpperLeftCorner(const char * text, int fontSize)
   return result;
 }
 
-void DrawHint()
+void DrawHint(void)
 {
   const char * text  = "Press [F] to toggle Fullscreen";
   const int fontSize = BASE_FONT_SIZE / 2;
